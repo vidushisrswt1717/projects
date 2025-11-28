@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Sem Student Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-container" class="container">
+        <h2>Student Login</h2>
+        <form id="login-form">
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" required>
+            
+            <label for="student-class">Class/Semester:</label>
+            <input type="text" id="student-class" required>
+            
+            <button type="submit">Start Quiz</button>
+        </form>
+        <p class="info-alert">🔔 15 Random Questions Quiz 🔔</p>
+    </div>
+
+    <div id="quiz-container" class="container hidden">
+        <div id="quiz-header">
+            <h3 id="welcome-message"></h3>
+            <div id="question-counter">Question 1 of 15</div>
+        </div>
+        
+        <div id="question-section">
+            <h4 id="question-text"></h4>
+            <div id="options-container" class="options">
+                </div>
+        </div>
+
+        <div id="navigation-buttons">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="submit-btn" class="hidden">Submit Quiz</button>
+        </div>
+    </div>
+
+    <div id="score-container" class="container hidden">
+        <h2>✅ Quiz Results</h2>
+        <p id="final-alert"></p>
+        <div id="score-details">
+            <p>Name: <span id="score-name"></span></p>
+            <p>Class: <span id="score-class"></span></p>
+            <p>Total Questions: 15</p>
+            <hr>
+            <p>Attempted: <span id="stats-attempted"></span></p>
+            <p>Skipped: <span id="stats-skipped"></span></p>
+            <p class="correct">Correct: <span id="stats-correct"></span></p>
+            <p class="incorrect">Incorrect: <span id="stats-incorrect"></span></p>
+            <h3>Final Score: <span id="final-score"></span> / 15</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
